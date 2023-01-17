@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Tailwind</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: "hsl(26, 100%, 55%)",
+              paleOrange: "hsl(25, 100%, 94%)",
+              veryDarkBlue: "hsl(220, 13%, 13%)",
+              darkGrayishBlue: "hsl(219, 9%, 45%)",
+              grayishBlue: "hsl(220, 14%, 75%)",
+              lightGrayishBlue: "hsl(223, 64%, 98%)",
+              white: "hsl(0, 0%, 100%)",
+              blackLight: "hsl(0, 0%, 0%)",
+            },
+          },
+          fontFamily: {
+            kumbh: ["Kumbh Sans", "sans-serif"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-kumbh">
+    <nav class="border border-b-1 border-b-slate-300">
+      <div class="py-4 px-8 flex items-center justify-between">
+        <div class="left-menu flex items-center justify-center gap-x-8">
+          <a href="#"
+            ><div class="hamburger flex flex-col gap-y-[3px]">
+              <div class="h-[3px] w-4 bg-gray-500"></div>
+              <div class="h-[3px] w-4 bg-gray-500"></div>
+              <div class="h-[3px] w-4 bg-gray-500"></div></div
+          ></a>
+          <a href="#"><img src="images/logo.svg" alt="" /></a>
+        </div>
+        <div class="right-menu flex items-center gap-x-8">
+          <a href="#"><img src="images/icon-cart.svg" alt="" /></a>
+          <div class="w-8 h-8 rounded-full">
+            <img class="w-full h-full" src="images/image-avatar.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section id="product">
+        <!-- carousel -->
+        <div class="w-full h-[60vh] relative">
+          <div class="flex w-full h-full">
+            <img
+              class="block w-full h-full"
+              src="images/image-product-1.jpg"
+              alt=""
+            />
+            <button
+              class="bg-white absolute top-1/2 left-0 ml-4 p-5 px-6 rounded-full"
+            >
+              <img src="images/icon-previous.svg" />
+            </button>
+            <button
+              class="bg-white absolute top-1/2 right-0 mr-4 p-5 px-6 rounded-full"
+            >
+              <img src="images/icon-next.svg" />
+            </button>
+          </div>
+        </div>
+
+        <!-- product info -->
+        <div class="p-4 py-6 mx-auto">
+          <div class="flex flex-col gap-y-3 max-w-sm">
+            <h3 class="font-semibold text-xl text-orange uppercase">
+              Sneaker Company
+            </h3>
+            <h1 class="font-bold text-4xl">Fall Limited Edition Sneakers</h1>
+          </div>
+          <p class="max-w-3xl text-2xl font-light text-blackLight">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="label flex items-center justify-between">
+            <div class="flex space-x-6 items-center">
+              <h2 class="font-bold text-3xl text-black">$125.00</h2>
+              <div class="discont-percent bg-paleOrange py-1 px-3 rounded-md">
+                <h3 class="font-bold text-2xl text-orange inline-block">50%</h3>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-2xl text-orange text-grayishBlue line-through"
+            >
+              $250.00
+            </h3>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Collections
+  Men
+  Women
+  About
+  Contact
+
+  
+
+  
+
+  
+  
+  
+  
+
+  0
+  Add to cart -->
+  </body>
+</html>
